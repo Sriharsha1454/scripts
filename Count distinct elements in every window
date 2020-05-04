@@ -1,0 +1,13 @@
+def countDistinct(arr, n, k):
+    arr1 = []
+    x = 0
+    count_arr = []
+    for i in range(0,n-k+1):
+        arr1 = arr[x:x+k:1]
+        count = 0
+        count = len(list(set(arr1)))
+        count_arr.append(count)
+        x = x + 1
+    #print(' '.join(map(str, count_arr)))  
+    #for z in range(0,len(count_arr)):
+    print(*count_arr)
